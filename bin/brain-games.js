@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 
-console.log('Welcome to the Brain Games!');
+import getUserName from "/home/notasound/frontend-project-44/src/cli.js";
+
+getUserName();
