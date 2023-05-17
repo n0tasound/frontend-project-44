@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getUserName from "/home/notasound/frontend-project-44/src/cli.js";
+import getUserName from '../src/cli.js';
 
 getUserName();
