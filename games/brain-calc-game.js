@@ -1,6 +1,3 @@
-import readlineSync from 'readline-sync';
-import playGame from '../src/index.js';
-
 const rules = 'What is the result of the expression?';
 
 const gameLogic = () => {
