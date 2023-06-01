@@ -12,13 +12,13 @@
 Простое ли число?  
   
 ###  Инструкции по установке и запуску:  
-Установка проекта:  
+**Установка проекта:**  
 `git clone git@github.com:n0tasound/frontend-project-44.git`  
 `make install`  
 `make publish`  
 `npm link`  
   
-Запуск игр:  
+**Запуск игр:**  
 `brain-even` Проверка на чётность  
 `brain-calc`Калькулятор  
 `brain-gcd` Наибольший общий делитель  
