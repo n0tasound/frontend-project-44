@@ -1,3 +1,3 @@
-const getRandomNum = (minNum, maxNum) => Math.floor(Math.random() * (maxNum + 1) + minNum);
+const getRandomNum = (min, max) => Math.floor(Math.random() * (max + 1 - min) + min);
 
 export default getRandomNum;
