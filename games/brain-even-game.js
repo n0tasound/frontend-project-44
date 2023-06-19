@@ -1,18 +1,21 @@
-const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+import getRandomNum from '../src/helper.js';
+import gameStart from '../src/index.js';
 
-const gameLogic = () => {
-  const randomNum = Math.floor(Math.random() * 101);
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const isEven = (number) => number % 2 === 0;
+
+const getQuestionAndAnswer = () => {
+  const randomNum = getRandomNum(2, 99);
+  const rightAnswer = isEven(randomNum) ? 'yes' : 'no';
   const question = `Question: ${randomNum}`;
 
-  let rightAnswer;
-  if (randomNum % 2 === 0) {
-    rightAnswer = 'yes';
-  } else {
-    rightAnswer = 'no';
-  }
-
-  const result = [rightAnswer, question];
+  const result = [question, rightAnswer];
   return result;
 };
 
-export { rules, gameLogic };
+const runGame = () => {
+  gameStart(description, getQuestionAndAnswer);
+};
+
+export default runGame;
