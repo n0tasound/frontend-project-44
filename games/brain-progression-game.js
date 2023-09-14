@@ -1,27 +1,40 @@
-const rules = 'What number is missing in the progression?';
+import getRandomNum from '../src/helper.js';
+import gameStart from '../src/index.js';
 
-const gameLogic = () => {
+const description = 'What number is missing in the progression?';
+
+const formProgression = () => {
+  const progressionStart = getRandomNum(2, 12);
+  const progressionLength = getRandomNum(5, 10);
+  const progressionStep = getRandomNum(2, 5);
+
   const progressionArr = [];
-  const progressionStart = Math.floor(Math.random() * 11 + 2);
-  const progressionLength = Math.floor(Math.random() * 6 + 5);
-  const progressionStep = Math.floor(Math.random() * 4 + 2);
-
   let j = progressionStart;
   for (let i = 0; i < progressionLength; i += 1) {
     progressionArr.push(j);
     j += progressionStep;
   }
+  return progressionArr;
+};
 
-  const randomProgressionIndex = Math.floor(Math.random() * progressionLength);
-  const rightNumber = progressionArr[randomProgressionIndex];
-  progressionArr[randomProgressionIndex] = '..';
+const getQuestionAndAnswer = () => {
+  const progression = formProgression();
+  const lastIndex = progression.length - 1;
 
-  const progression = progressionArr.join(' ');
-  const question = `Question: ${progression}`;
+  const randomProgressionIndex = getRandomNum(0, lastIndex);
+  const rightNumber = progression[randomProgressionIndex];
+  progression[randomProgressionIndex] = '..';
+
+  const progressionToShow = progression.join(' ');
+  const question = `Question: ${progressionToShow}`;
 
   const rightAnswer = rightNumber.toString();
-  const result = [rightAnswer, question];
+  const result = [question, rightAnswer];
   return result;
 };
 
-export { rules, gameLogic };
+const runGame = () => {
+  gameStart(description, getQuestionAndAnswer);
+};
+
+export default runGame;
