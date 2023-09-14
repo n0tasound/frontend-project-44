@@ -3,10 +3,10 @@ import gameStart from '../src/index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const getGcd = (firstRandomNum, secondRandomNum, lowest) => {
+const getGcd = (firstRandomNum, secondRandomNum, lowestNum) => {
   let rightNumber = 1;
 
-  for (let i = 2; i <= lowest; i += 1) {
+  for (let i = 2; i <= lowestNum; i += 1) {
     if (firstRandomNum % i === 0 && secondRandomNum % i === 0) {
       rightNumber = i;
     }
