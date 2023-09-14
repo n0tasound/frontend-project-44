@@ -26,8 +26,8 @@
 `brain-prime` Простое ли число? 
 
 ### asciinema:
-[brain-even](https://asciinema.org/a/DZ6gMvBDrVPZAfRyODpDH8q3l) |
-[brain-calc](https://asciinema.org/a/KPSGFW9gBk5PbWKK5j2rUZ8Nr) |
-[brain-gcd](https://asciinema.org/a/BiApiOZKWkoH8QKwtBn9od5bS) |
-[brain-progression](https://asciinema.org/a/UODM8sTJtIWzWlAyAymsdh9xQ) |
-[brain-prime](https://asciinema.org/a/1EHldivzNttPSaWrJUjpv7Ave) 
+[![asciicast](https://asciinema.org/a/607865.svg)](https://asciinema.org/a/607865)|
+[brain-calc](https://asciinema.org/a/607867) |
+[brain-gcd](https://asciinema.org/a/607868) |
+[brain-progression](https://asciinema.org/a/607869) |
+[brain-prime](https://asciinema.org/a/607871) 
